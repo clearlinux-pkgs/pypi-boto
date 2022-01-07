@@ -4,7 +4,7 @@
 #
 Name     : pypi-boto
 Version  : 2.49.0
-Release  : 81
+Release  : 82
 URL      : https://files.pythonhosted.org/packages/c8/af/54a920ff4255664f5d238b5aebd8eedf7a07c7a5e71e27afcfe840b82f51/boto-2.49.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/c8/af/54a920ff4255664f5d238b5aebd8eedf7a07c7a5e71e27afcfe840b82f51/boto-2.49.0.tar.gz
 Summary  : Amazon Web Services Library
@@ -14,15 +14,14 @@ Requires: pypi-boto-bin = %{version}-%{release}
 Requires: pypi-boto-python = %{version}-%{release}
 Requires: pypi-boto-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-BuildRequires : httpretty-python
-BuildRequires : nose-python
-BuildRequires : pbr
-BuildRequires : pip
-BuildRequires : python-mock
+BuildRequires : pypi(httpretty)
+BuildRequires : pypi(mock)
+BuildRequires : pypi(nose)
+BuildRequires : pypi(pbr)
+BuildRequires : pypi(pip)
+BuildRequires : pypi(requests)
+BuildRequires : pypi(setuptools)
 BuildRequires : python3-dev
-BuildRequires : requests-python
-BuildRequires : setuptools
-Provides: boto
 
 %description
 boto
@@ -65,7 +64,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641411732
+export SOURCE_DATE_EPOCH=1641517901
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
